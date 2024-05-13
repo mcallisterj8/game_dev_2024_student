@@ -11,34 +11,23 @@ function setup() {
 
 function draw() {
   background(0);
-  const isWithinRightBounds = circleX + circleRadius <= width;
-  const isWithinLeftBounds = circleX - circleRadius >= 0;
 
-  const isWithinUpperBounds = circleY - circleRadius >= 0;
-  const isWithinLowerBounds = circleY + circleRadius <= height;
-
-  if(keyIsDown(UP_ARROW)) {
-    if(keyCode === UP_ARROW && isWithinUpperBounds){
-      circleY -= speed;    
-    
-    }
+  if(keyIsDown(UP_ARROW)) {  
+      circleY -= speed;
     
   } else if(keyIsDown(DOWN_ARROW)){
-    if(keyCode === DOWN_ARROW && isWithinLowerBounds){
-      circleY += speed;    
-    }
+      circleY += speed;        
   }
 
   if(keyIsDown(RIGHT_ARROW)) {
-    if (keyCode === RIGHT_ARROW && isWithinRightBounds) {    
       circleX += speed;
-            
-    }
+
   } else if(keyIsDown(LEFT_ARROW)){
-    if (keyCode == LEFT_ARROW && isWithinLeftBounds) {
       circleX -= speed;    
-    }
+    
   }
+  circleX = constrain(circleX, 0 + circleRadius, width - circleRadius);
+  circleY = constrain(circleY, 0 + circleRadius, height - circleRadius);
 
   ellipse(circleX, circleY, circleDiameter);
 }
