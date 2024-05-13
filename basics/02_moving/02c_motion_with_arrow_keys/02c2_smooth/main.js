@@ -11,32 +11,35 @@ function setup() {
 
 function draw() {
   background(0);
-
-  
-
-  ellipse(circleX, circleY, circleDiameter);
-}
-
-function keyPressed(){
-
   const isWithinRightBounds = circleX + circleRadius <= width;
   const isWithinLeftBounds = circleX - circleRadius >= 0;
 
   const isWithinUpperBounds = circleY - circleRadius >= 0;
   const isWithinLowerBounds = circleY + circleRadius <= height;
 
-  if(keyCode === UP_ARROW && isWithinUpperBounds){
+  if(keyIsDown(UP_ARROW)) {
+    if(keyCode === UP_ARROW && isWithinUpperBounds){
       circleY -= speed;    
     
-  } else if(keyCode === DOWN_ARROW && isWithinLowerBounds){
+    }
+    
+  } else if(keyIsDown(DOWN_ARROW)){
+    if(keyCode === DOWN_ARROW && isWithinLowerBounds){
       circleY += speed;    
+    }
   }
 
-  if (keyCode === RIGHT_ARROW && isWithinRightBounds) {    
+  if(keyIsDown(RIGHT_ARROW)) {
+    if (keyCode === RIGHT_ARROW && isWithinRightBounds) {    
       circleX += speed;
             
-  } else if (keyCode == LEFT_ARROW && isWithinLeftBounds) {
+    }
+  } else if(keyIsDown(LEFT_ARROW)){
+    if (keyCode == LEFT_ARROW && isWithinLeftBounds) {
       circleX -= speed;    
+    }
   }
 
+  ellipse(circleX, circleY, circleDiameter);
 }
+
