@@ -9,6 +9,6 @@ function setup(){
 function draw(){
     background(0);
     circleY -= 2;
-    circleX += 2;    
+    circleX += 2;
     ellipse(circleX, circleY, 50);
 }
