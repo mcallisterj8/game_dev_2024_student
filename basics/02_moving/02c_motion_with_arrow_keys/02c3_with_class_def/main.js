@@ -7,21 +7,8 @@ function setup() {
 
 function draw() {
   background(0);
+  circleObj.update();
   circleObj.draw();
-
-  if(keyIsDown(UP_ARROW)) {        
-    circleObj.moveUp();
-    
-
-  } else if(keyIsDown(DOWN_ARROW)){
-    circleObj.moveDown();
-  }
-
-  if(keyIsDown(RIGHT_ARROW)) {     
-    circleObj.moveRight();
-  } else if(keyIsDown(LEFT_ARROW)){
-    circleObj.moveLeft();
-  }
 
 }
 

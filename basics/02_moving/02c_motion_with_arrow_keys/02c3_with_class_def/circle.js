@@ -7,6 +7,20 @@ class Circle {
         this.diameter = this.radius * 2;
     }
 
+    update(){
+        if(keyIsDown(UP_ARROW)) {        
+            this.moveUp();
+        } else if(keyIsDown(DOWN_ARROW)){
+            this.moveDown();
+        }
+
+        if(keyIsDown(RIGHT_ARROW)) {     
+            this.moveRight();
+        } else if(keyIsDown(LEFT_ARROW)){
+            this.moveLeft();
+        }
+    }
+
     draw(){
         ellipse(this.x, this.y, this.diameter);
     }
