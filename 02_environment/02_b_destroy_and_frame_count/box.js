@@ -15,11 +15,12 @@ class Box {
 
     draw() {
         fill(255);
+        // console.log('x position:', this.x);
         rect(this.x, this.y, Box.WIDTH, Box.HEIGHT);
     }
     
     isOffScreen() {
-        return this.x < -this.width;
+        return this.x < -Box.WIDTH;
     }
 
 }

@@ -1,4 +1,5 @@
 const boxes = [];
+const FRAME_AMOUNT = 100;
 
 function setup() {
     createCanvas(600, 600);
@@ -8,7 +9,11 @@ function setup() {
 
 function draw() {
     background(0);
-    addBox();
+    
+    if(frameCount % FRAME_AMOUNT === 0){
+        addBox();
+    }
+
     renderBoxes();
 }
 
