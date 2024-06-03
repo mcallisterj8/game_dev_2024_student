@@ -19,6 +19,8 @@ class Circle {
         } else if(keyIsDown(LEFT_ARROW)){
             this.moveLeft();
         }
+
+        this.draw();
     }
 
     draw(){

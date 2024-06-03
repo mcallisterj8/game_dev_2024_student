@@ -7,8 +7,7 @@ function setup() {
 
 function draw() {
   background(0);
-  circleObj.update();
-  circleObj.draw();
+  circleObj.update();  
 
 }
 
