@@ -49,6 +49,6 @@ class Player {
     }
 
     shoot() {
-        
+        return new Laser(this.x, this.topEdge());
     }
 }
