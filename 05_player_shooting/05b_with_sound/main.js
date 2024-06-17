@@ -3,6 +3,16 @@ const lasers = [];
 
 let player = null;
 
+function preload() {
+    /**
+     * In order to use loadSound(), you must have the following import in index.html:
+     * https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js
+     */
+
+    Laser.FIRE_SOUND = loadSound("assets/sounds/laser_fire.mp3");
+
+}
+
 function setup() {
     createCanvas(600, 600);
     player = new Player(width / 2, height - 20, 20);

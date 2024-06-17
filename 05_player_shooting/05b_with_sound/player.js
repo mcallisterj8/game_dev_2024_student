@@ -49,6 +49,7 @@ class Player {
     }
 
     shoot() {
+        Laser.FIRE_SOUND.play();
         return new Laser(this.x, this.topEdge());
     }
 }

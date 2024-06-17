@@ -3,6 +3,9 @@ class Laser {
     static RADIUS = 2.5;
     static DIAMETER = Laser.RADIUS * 2;
 
+    // This will be set in main.js and used in Player class.
+    static FIRE_SOUND = null;
+
     constructor(x, y) {
         this.x = x;
         this.y = y;        
