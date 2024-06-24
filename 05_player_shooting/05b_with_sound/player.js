@@ -7,7 +7,6 @@ class Player {
         this.radius = radius;
         this.diameter = this.radius * 2;
 
-        this.rightEdge = this.y - this.radius;
     }
 
     update() {
