@@ -9,7 +9,7 @@ class Enemy {
         this.xVelocity = Enemy.X_VELOCITY;
     }
 
-    leftEdge() {
+    leftEdge() {        
         return this.x;
     }
 

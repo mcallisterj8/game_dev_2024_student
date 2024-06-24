@@ -1,3 +1,10 @@
+/**
+ * const enemies = [];
+ * const ENEMY_COLS = 6;
+ * const ENEMY_ROWS = 5;
+ * 
+ */
+
 let enemy = null;
 
 function setup() {
@@ -8,8 +15,9 @@ function setup() {
 
 function draw() {
     background(0);
-
+    
     enemy.update();
+
     if(enemy.hasHitSideOfScreen()) {
         enemy.dropAndReverseDirection();
     }
