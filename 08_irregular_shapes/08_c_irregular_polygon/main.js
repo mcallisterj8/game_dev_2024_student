@@ -4,7 +4,7 @@ function setup() {
 
 function draw() {
     background(0);
-    fill(255, 255, 255); // fill the shape with red color
+    fill(255, 255, 255); // fill the shape with white color
 
     beginShape();
     vertex(200, 100);
