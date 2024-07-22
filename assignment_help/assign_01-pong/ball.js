@@ -83,8 +83,8 @@ class Ball {
                 - Is the ball within verticalRange?
                 - Is the ball within horizontalRange?
         */
-        const withinVerticalRange = this.y > paddle.y 
-                                    && this.y < paddle.y + paddle.height;
+        const withinVerticalRange = this.y >= paddle.y 
+                                    && this.y <= paddle.y + paddle.height;
   
         const withinHorizontalRange = (this.xVelocity > 0 ?
                                         this.x + this.radius >= paddle.x && 
